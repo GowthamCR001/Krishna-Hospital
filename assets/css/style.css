@@ -15242,12 +15242,12 @@ img::selection {
 
 .dz-preloader-1 .dz_ring_3 {
     animation-name: dzRing3;
-    stroke: #255ff4;
+    stroke: var(--bs-primary);
 }
 
 .dz-preloader-1 .dz_ring_4 {
     animation-name: dzRing4;
-    stroke: #f42582;
+    stroke: var(--bs-secondary);
 }
 
 @keyframes dzRing1 {
