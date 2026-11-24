@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Krishna Hospital (Port 8000)",
+            "url": "http://localhost:8000/medical/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
