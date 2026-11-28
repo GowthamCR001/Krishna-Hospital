@@ -1530,13 +1530,14 @@
                                     <form action="../assets/script/contact_smtp.php" class="dzForm" method="POST">
                                         <input type="hidden" class="form-control" name="dzToDo" value="Appointment">
                                         <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+                                        <input type="hidden" name="formType" value="Home Page Appointment">
                                         <div class="dzFormMsg"></div>
                                         <div class="row">
                                             <div class="col-sm-6 m-b30">
                                                 <div class="form-floating floating-underline input-light">
-                                                    <input name="dzName" type="text" class="form-control"
+                                                    <input name="dzName" required type="text" class="form-control"
                                                         id="inputYourName" placeholder="Your Name">
-                                                    <label for="inputYourName">Your Name</label>
+                                                    <label for="inputYourName">Your Name *</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 m-b30">
@@ -1548,10 +1549,10 @@
                                             </div>
                                             <div class="col-sm-6 m-b30">
                                                 <div class="form-floating floating-underline input-light">
-                                                    <input name="dzPhoneNumber" type="text"
+                                                    <input name="dzPhoneNumber" required type="tel"
                                                         class="form-control dz-number" id="inputPhoneNumber"
                                                         placeholder="Phone Number">
-                                                    <label for="inputPhoneNumber">Phone Number</label>
+                                                    <label for="inputPhoneNumber">Phone Number *</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 m-b30">

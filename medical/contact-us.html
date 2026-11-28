@@ -693,13 +693,14 @@
                                     <form action="../assets/script/contact_smtp.php" class="dzForm" method="POST">
                                         <input type="hidden" class="form-control" name="dzToDo" value="Contact">
                                         <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+                                        <input type="hidden" name="formType" value="Contact Us (Get In Touch)">
                                         <div class="dzFormMsg"></div>
                                         <div class="row">
                                             <div class="col-sm-6 m-b30">
                                                 <div class="form-floating floating-underline input-light">
-                                                    <input name="dzFirstName" type="text" class="form-control"
+                                                    <input name="dzFirstName" required type="text" class="form-control"
                                                         id="inputFirstName" placeholder="First Name">
-                                                    <label for="inputFirstName">First Name</label>
+                                                    <label for="inputFirstName">First Name *</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 m-b30">
@@ -718,10 +719,10 @@
                                             </div>
                                             <div class="col-sm-6 m-b30">
                                                 <div class="form-floating floating-underline input-light">
-                                                    <input name="dzPhoneNumber" type="text"
+                                                    <input name="dzPhoneNumber" required type="tel"
                                                         class="form-control dz-number" id="inputPhoneNumber"
                                                         placeholder="Phone Number">
-                                                    <label for="inputPhoneNumber">Phone Number</label>
+                                                    <label for="inputPhoneNumber">Phone Number *</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 m-b30">
