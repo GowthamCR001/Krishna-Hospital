@@ -80,8 +80,8 @@
 
             <div class="header-info-bar d-none d-xxl-block">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
                             <div class="icon-bx-wraper style-5">
                                 <div class="icon-bx">
                                     <span class="icon-cell">
@@ -89,12 +89,12 @@
                                     </span>
                                 </div>
                                 <div class="icon-content">
-                                    <h2 class="dz-title text-primary">Contatc Us</h2>
-                                    <p><a href="tel:+918172462618" class="text-secondary">+91 81724 62618</a></p>
+                                    <h2 class="dz-title text-primary">Contact Us</h2>
+                                    <p class="mb-0"><a href="tel:08172462618" class="text-secondary text-nowrap">08172 - 462618</a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-auto">
                             <div class="icon-bx-wraper style-5">
                                 <div class="icon-bx">
                                     <span class="icon-cell">
@@ -103,25 +103,26 @@
                                 </div>
                                 <div class="icon-content">
                                     <h2 class="dz-title text-primary">Email Supports</h2>
-                                    <p><a href="mailto:krishnahospitalhassan@gmail.com" class="text-secondary">krishnahospitalhassan@gmail.com</a>
+                                    <p class="mb-0"><a href="mailto:krishnahospitalhassan@gmail.com"
+                                            class="text-secondary text-nowrap">krishnahospitalhassan@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-auto">
                             <div class="icon-bx-wraper style-5">
                                 <div class="icon-bx">
-                                    <span class="icon-cell">
-                                        <img src="images/svg/icon3.svg" alt="">
-                                    </span>
+                                    <a href="appointment.html" class="icon-cell">
+                                        <img src="images/svg/icon3.svg" alt="Online Appointment">
+                                    </a>
                                 </div>
                                 <div class="icon-content">
-                                    <h2 class="dz-title text-primary">Online Appointment </h2>
-                                    <p>Book Now <i class="feather icon-arrow-right"></i></p>
+                                    <h2 class="dz-title text-primary"><a href="appointment.html" class="text-primary">Online Appointment</a></h2>
+                                    <p class="mb-0"><a href="appointment.html" class="text-secondary fw-semibold">Book Now <i class="feather icon-arrow-right"></i></a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-auto">
                             <div class="icon-bx-wraper style-5">
                                 <div class="icon-bx">
                                     <span class="icon-cell">
@@ -130,14 +131,13 @@
                                 </div>
                                 <div class="icon-content">
                                     <h2 class="dz-title text-primary">Supports</h2>
-                                    <p>24x7 Supports</p>
+                                    <p class="mb-0">24x7 Supports</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Main Header -->
             <div class="sticky-header main-bar-wraper">
                 <div class="main-bar clearfix bg-secondary text-white">
@@ -518,7 +518,7 @@
                         <div class="sidebar-header m-b20">
                             <a href="index.html"><img src="images/logo.svg" alt="Krishna Hospital"></a>
                         </div>
-                        <p>Krishna Hospital is a premier multi-speciality healthcare centre dedicated to providing 24x7
+                        <p>Krishna Hospital is a premier Multi-speciality healthcare centre dedicated to providing 24x7
                             emergency trauma care, advanced modular surgical suites, intensive care units, and
                             compassionate patient healing.</p>
                     </div>
@@ -533,8 +533,8 @@
                             <li><i class="feather icon-mail me-2 text-primary"></i> <a
                                     href="mailto:krishnahospitalhassan@gmail.com"
                                     class="text-body">krishnahospitalhassan@gmail.com</a></li>
-                            <li><i class="feather icon-phone-call me-2 text-primary"></i> <a href="tel:+918172462618"
-                                    class="text-body fw-bold">+91 81724 62618</a></li>
+                            <li><i class="feather icon-phone-call me-2 text-primary"></i> <a href="tel:08172462618"
+                                    class="text-body fw-bold">08172 - 462618</a></li>
                         </ul>
                     </div>
 
@@ -586,12 +586,12 @@
                             </ul>
                         </nav>
                         <div class="dz-btn">
-                            <a href="tel:+918172462618"
+                            <a href="tel:08172462618"
                                 class="btn btn-lg btn-icon btn-primary radius-xl btn-shadow mb-3 mb-sm-0">
                                 <span class="left-icon">
                                     <i class="feather icon-phone-call"></i>
                                 </span>
-                                +91 81724 62618
+                                08172 - 462618
                             </a>
                         </div>
                     </div>
@@ -646,251 +646,251 @@
                         </ul>
                     </div>
 
-                    <!-- Facilities Grid Using Exact Overlay Style From Screenshot -->
-                    <div class="row g-4" id="facility-grid">
+                    <!-- Custom Styles for Facilities Slider -->
+                    <style>
+                        .facilities-slider-wrap {
+                            position: relative;
+                            padding: 0 10px;
+                        }
+                        .facilities-swiper .swiper-slide {
+                            height: auto;
+                        }
+                        .facilities-swiper .dz-card.style-2.dz-card-overlay {
+                            height: 480px;
+                            border-radius: 20px;
+                            box-shadow: 0 10px 30px rgba(3, 27, 78, 0.08);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+                        .facilities-swiper .dz-card.style-2.dz-card-overlay:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 16px 36px rgba(3, 27, 78, 0.16);
+                        }
+                        .facilities-swiper .dz-card.style-2.dz-card-overlay .bottom-info {
+                            display: block;
+                        }
+                        .facilities-swiper .dz-card.style-2.dz-card-overlay .dz-title {
+                            font-size: 22px;
+                            font-weight: 600;
+                            color: #ffffff;
+                            line-height: 1.4;
+                            margin-bottom: 0;
+                        }
+                        .facilities-btn-prev,
+                        .facilities-btn-next {
+                            position: absolute;
+                            top: 45%;
+                            transform: translateY(-50%);
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 50%;
+                            background-color: #ffffff;
+                            color: #031B4E;
+                            box-shadow: 0 4px 20px rgba(3, 27, 78, 0.15);
+                            border: 1px solid rgba(0, 0, 0, 0.08);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            z-index: 10;
+                            cursor: pointer;
+                            font-size: 20px;
+                            transition: all 0.3s ease;
+                        }
+                        .facilities-btn-prev:hover,
+                        .facilities-btn-next:hover {
+                            background-color: var(--bs-primary);
+                            color: #ffffff;
+                            border-color: var(--bs-primary);
+                            box-shadow: 0 6px 25px rgba(0, 189, 224, 0.4);
+                        }
+                        .facilities-btn-prev {
+                            left: -26px;
+                        }
+                        .facilities-btn-next {
+                            right: -26px;
+                        }
+                        .facilities-pagination .swiper-pagination-bullet {
+                            width: 10px;
+                            height: 10px;
+                            background: #031B4E;
+                            opacity: 0.25;
+                            margin: 0 5px;
+                            transition: all 0.3s ease;
+                        }
+                        .facilities-pagination .swiper-pagination-bullet-active {
+                            opacity: 1;
+                            background: var(--bs-primary);
+                            width: 26px;
+                            border-radius: 6px;
+                        }
+                        @media (max-width: 1200px) {
+                            .facilities-btn-prev {
+                                left: 5px;
+                            }
+                            .facilities-btn-next {
+                                right: 5px;
+                            }
+                        }
+                        @media (max-width: 767px) {
+                            .facilities-swiper .dz-card.style-2.dz-card-overlay {
+                                height: 400px;
+                            }
+                            .facilities-btn-prev,
+                            .facilities-btn-next {
+                                width: 40px;
+                                height: 40px;
+                                font-size: 16px;
+                            }
+                        }
+                    </style>
 
-                        <!-- Facility 1: Doctor Consultation & Clinical Care -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-emergency">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img1.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">24x7 Available</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">24 &times; 7 Emergency &amp; Acute Trauma Care</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                    <!-- Facilities Carousel Wrapper -->
+                    <div class="facilities-slider-wrap">
+                        <div class="swiper facilities-swiper pb-4">
+                            <div class="swiper-wrapper">
+
+                                <!-- Facility 1: Emergency & Acute Trauma Care -->
+                                <div class="swiper-slide facility-item cat-emergency">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img1.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">24x7 Available</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">24 &times; 7 Emergency &amp; Acute Trauma Care</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 2: Transitional Physical Rehab -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-rehab">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img2.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Therapy &amp; Rehab</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Transitional Rehabilitation &amp; Physical
-                                                Therapy</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 2: Transitional Physical Rehab -->
+                                <div class="swiper-slide facility-item cat-rehab">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img2.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Therapy &amp; Rehab</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Transitional Rehabilitation &amp; Physical Therapy</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 3: Modular Operation Theatres -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-surgery">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/portfolio/pic1.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Surgical Suites</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Modular Operation Theatres with Laminar
-                                                Airflow</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 3: Modular Operation Theatres -->
+                                <div class="swiper-slide facility-item cat-surgery">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/portfolio/pic1.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Surgical Suites</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Modular Operation Theatres with Laminar Airflow</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 4: CT Scan & Radiology (Support Service 1) -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-support cat-diagnostics">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/portfolio/pic2.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Diagnostics &amp; Imaging</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">CT Scan &amp; Radiology (X-Ray &amp; USG)</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 4: CT Scan & Radiology -->
+                                <div class="swiper-slide facility-item cat-support cat-diagnostics">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/portfolio/pic2.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Diagnostics &amp; Imaging</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">CT Scan &amp; Radiology (X-Ray &amp; USG)</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 5: Adult & Paediatric ICU Services -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-emergency">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img5.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Critical Care</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Adult ICU &amp; Paediatric ICU (PICU)</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 5: Adult & Paediatric ICU Services -->
+                                <div class="swiper-slide facility-item cat-emergency">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img5.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Critical Care</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Adult ICU &amp; Paediatric ICU (PICU)</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 6: Deluxe Inpatient Suites & Patient Wards -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-rehab">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/portfolio/pic4.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Inpatient Suites</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Deluxe Inpatient Rooms &amp; Recovery Suites</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 6: Deluxe Inpatient Suites & Patient Wards -->
+                                <div class="swiper-slide facility-item cat-rehab">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/portfolio/pic4.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Inpatient Suites</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Deluxe Inpatient Rooms &amp; Recovery Suites</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 7: Diagnostic Laboratory (Support Service 2) -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-support cat-diagnostics">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img6.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Diagnostic Laboratory</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Comprehensive Diagnostic Laboratory</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 7: Diagnostic Laboratory -->
+                                <div class="swiper-slide facility-item cat-support cat-diagnostics">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img6.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Diagnostic Laboratory</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Comprehensive Diagnostic Laboratory</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 8: In-House Pharmacy (Krishna Medicals) (Support Service 3) -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-support">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img3.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">24x7 Pharmacy</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">In-House Pharmacy (Krishna Medicals)</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 8: In-House Pharmacy (Krishna Medicals) -->
+                                <div class="swiper-slide facility-item cat-support">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img3.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">24x7 Pharmacy</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">In-House Pharmacy (Krishna Medicals)</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 9: Medical Records Department (MRD) (Support Service 4) -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-support">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/blog/overlay/large/img4.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Health Records</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">Medical Records Department (MRD)</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 9: Medical Records Department (MRD) -->
+                                <div class="swiper-slide facility-item cat-support">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/blog/overlay/large/img4.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Health Records</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">Medical Records Department (MRD)</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Facility 10: 24-Hour Advanced Ambulance Fleet -->
-                        <div class="col-lg-4 col-md-6 facility-item cat-emergency">
-                            <div class="dz-card style-2 dz-card-overlay"
-                                style="background-image: url(images/portfolio/pic3.webp);">
-                                <div class="dz-info">
-                                    <div class="post-date">Emergency Transport</div>
-                                    <div class="bottom-info">
-                                        <h3 class="dz-title">
-                                            <a href="contact-us.html">24-Hour Advanced Life Support Ambulance Fleet</a>
-                                        </h3>
-                                        <a href="contact-us.html" class="btn btn-square btn-white rounded-circle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </a>
+                                <!-- Facility 10: 24-Hour Advanced Ambulance Fleet -->
+                                <div class="swiper-slide facility-item cat-emergency">
+                                    <div class="dz-card style-2 dz-card-overlay"
+                                        style="background-image: url(images/portfolio/pic3.webp);">
+                                        <div class="dz-info">
+                                            <div class="post-date">Emergency Transport</div>
+                                            <div class="bottom-info">
+                                                <h3 class="dz-title">24-Hour Advanced Life Support Ambulance Fleet</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
+
+                            <!-- Swiper Pagination -->
+                            <div class="swiper-pagination facilities-pagination mt-4 position-relative"></div>
                         </div>
 
+                        <!-- Left / Right Navigation Buttons -->
+                        <button type="button" class="facilities-btn-prev" aria-label="Previous Facility">
+                            <i class="feather icon-chevron-left"></i>
+                        </button>
+                        <button type="button" class="facilities-btn-next" aria-label="Next Facility">
+                            <i class="feather icon-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -898,12 +898,61 @@
 
         </main>
 
-        <!-- Inline Script for Facilities Filter Handling -->
+        <!-- Inline Script for Facilities Slider & Filter Handling -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const filterButtons = document.querySelectorAll('#facility-filters a');
-                const facilityCards = document.querySelectorAll('#facility-grid .facility-item');
+                const swiperWrapper = document.querySelector('.facilities-swiper .swiper-wrapper');
+                if (!swiperWrapper) return;
 
+                const originalSlides = Array.from(swiperWrapper.children).map(slide => slide.cloneNode(true));
+                let facilitiesSwiper = null;
+
+                function initFacilitiesSwiper(slidesCount) {
+                    if (facilitiesSwiper) {
+                        facilitiesSwiper.destroy(true, true);
+                    }
+
+                    const isLoopable = slidesCount > 3;
+
+                    facilitiesSwiper = new Swiper('.facilities-swiper', {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                        loop: isLoopable,
+                        autoplay: {
+                            delay: 3500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        navigation: {
+                            nextEl: '.facilities-btn-next',
+                            prevEl: '.facilities-btn-prev',
+                        },
+                        pagination: {
+                            el: '.facilities-pagination',
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            1200: {
+                                slidesPerView: 3,
+                                spaceBetween: 24,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 16,
+                            }
+                        }
+                    });
+                }
+
+                // Initialize swiper with all 10 facilities
+                initFacilitiesSwiper(originalSlides.length);
+
+                // Filter button click event
                 filterButtons.forEach(btn => {
                     btn.addEventListener('click', function (e) {
                         e.preventDefault();
@@ -912,14 +961,16 @@
 
                         const filterValue = this.getAttribute('data-filter');
 
-                        facilityCards.forEach(card => {
-                            if (filterValue === '*' || card.classList.contains(filterValue.substring(1))) {
-                                card.style.display = 'block';
-                                card.classList.add('animate__animated', 'animate__fadeIn');
-                            } else {
-                                card.style.display = 'none';
+                        swiperWrapper.innerHTML = '';
+                        let count = 0;
+                        originalSlides.forEach(slide => {
+                            if (filterValue === '*' || slide.classList.contains(filterValue.replace('.', ''))) {
+                                swiperWrapper.appendChild(slide.cloneNode(true));
+                                count++;
                             }
                         });
+
+                        initFacilitiesSwiper(count);
                     });
                 });
             });
@@ -947,7 +998,7 @@
                                     </div>
                                     <div class="icon-content">
                                         <h5 class="dz-title">Call Us</h5>
-                                        <p><a href="tel:tel:+918172462618" class="text-body">+91 81724 62618</a></p>
+                                        <p><a href="tel:08172462618" class="text-body">08172 - 462618</a></p>
                                     </div>
                                 </div>
                             </div>
