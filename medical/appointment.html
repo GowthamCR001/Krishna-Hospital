@@ -723,60 +723,49 @@
 
                                     <!-- Speciality / Department -->
                                     <div class="col-md-6">
-                                        <label class="form-label fw-semibold small text-secondary">Select Department
-                                            / Speciality <span class="text-danger">*</span></label>
-                                        <select name="dzSpeciality" required class="form-select bg-light border-0 py-2">
+                                        <label class="form-label fw-semibold small text-secondary">Select Department / Speciality <span class="text-danger">*</span></label>
+                                        <select name="dzSpeciality" id="dzSpeciality" required class="form-select bg-light border-0 py-2">
                                             <option value="" disabled selected>Choose Medical Department</option>
-                                            <option value="General Medicine & Diabetology">General Medicine &
-                                                Diabetology</option>
+                                            <option value="General Medicine & Diabetology">General Medicine & Diabetology</option>
                                             <option value="Neurology Services">Neurology Services</option>
-                                            <option value="Paediatrics & Neonatology">Paediatrics & Neonatology
-                                            </option>
-                                            <option value="Gynaecology & Obstetrics">Gynaecology & Obstetrics
-                                            </option>
-                                            <option value="In-Vitro Fertilisation (IVF)">In-Vitro Fertilisation
-                                                (IVF)</option>
-                                            <option value="Physiotherapy & Rehabilitation">Physiotherapy &
-                                                Rehabilitation</option>
-                                            <option value="General & Laparoscopic Surgery">General & Laparoscopic
-                                                Surgery</option>
-                                            <option value="Orthopaedics & Joint Replacement">Orthopaedics & Joint
-                                                Replacement</option>
-                                            <option value="Neurosurgery & Spine Care">Neurosurgery & Spine Care
-                                            </option>
-                                            <option value="Plastic, Reconstructive & Cosmetic Surgery">Plastic,
-                                                Reconstructive & Cosmetic Surgery</option>
-                                            <option value="Urology & Andrology Services">Urology & Andrology
-                                                Services</option>
-                                            <option value="ENT (Ear, Nose & Throat)">ENT (Ear, Nose & Throat)
-                                            </option>
-                                            <option value="24/7 Emergency & Critical Care">24/7 Emergency & Critical
-                                                Care</option>
+                                            <option value="Paediatrics & Neonatology">Paediatrics & Neonatology</option>
+                                            <option value="Gynaecology & Obstetrics">Gynaecology & Obstetrics</option>
+                                            <option value="In-Vitro Fertilisation (IVF)">In-Vitro Fertilisation (IVF)</option>
+                                            <option value="Physiotherapy & Rehabilitation">Physiotherapy & Rehabilitation</option>
+                                            <option value="General & Laparoscopic Surgery">General & Laparoscopic Surgery</option>
+                                            <option value="Orthopaedics & Joint Replacement">Orthopaedics & Joint Replacement</option>
+                                            <option value="Neurosurgery & Spine Care">Neurosurgery & Spine Care</option>
+                                            <option value="Plastic, Reconstructive & Cosmetic Surgery">Plastic, Reconstructive & Cosmetic Surgery</option>
+                                            <option value="Urology & Andrology Services">Urology & Andrology Services</option>
+                                            <option value="ENT (Ear, Nose & Throat)">ENT (Ear, Nose & Throat)</option>
+                                            <option value="24/7 Emergency & Critical Care">24/7 Emergency & Critical Care</option>
+                                            <option value="Anaesthesiology & Pain Management">Anaesthesiology & Pain Management</option>
+                                            <option value="Radio-Diagnosis & Imaging">Radio-Diagnosis & Imaging</option>
                                         </select>
                                     </div>
 
                                     <!-- Doctor Preference -->
                                     <div class="col-md-6">
-                                        <label class="form-label fw-semibold small text-secondary">Preferred Doctor
-                                            <small class="text-muted">(Optional)</small></label>
-                                        <select name="dzDoctor" class="form-select bg-light border-0 py-2">
+                                        <label class="form-label fw-semibold small text-secondary">Preferred Doctor <small class="text-muted">(Optional)</small></label>
+                                        <select name="dzDoctor" id="dzDoctor" class="form-select bg-light border-0 py-2">
                                             <option value="Any Available Specialist" selected>Any Available Specialist (Fastest Token)</option>
-                                            <option value="Dr. Halesha B.R.">Dr. Halesha B.R. (General Medicine)</option>
-                                            <option value="Dr. Harsha B.S.">Dr. Harsha B.S. (General Medicine & Emergency)</option>
-                                            <option value="Dr. Ishwaraprasad G.D.">Dr. Ishwaraprasad G.D. (General Surgery)</option>
-                                            <option value="Dr. Ajith Kumar K.S.">Dr. Ajith Kumar K.S. (Orthopaedics)</option>
-                                            <option value="Dr. Subramanya B.R.">Dr. Subramanya B.R. (Plastic & Cosmetic Surgery)</option>
-                                            <option value="Dr. Sridhara S.K.">Dr. Sridhara S.K. (Obstetrics & Gynaecology)</option>
-                                            <option value="Dr. Impana K.">Dr. Impana K. (Obstetrics & Gynaecology)</option>
-                                            <option value="Dr. Adarsh A.M.">Dr. Adarsh A.M. (Paediatrics)</option>
-                                            <option value="Dr. Pratheeksha">Dr. Pratheeksha (Paediatrics)</option>
-                                            <option value="Dr. Satyanarayan R.">Dr. Satyanarayan R. (ENT - Ear, Nose & Throat)</option>
-                                            <option value="Dr. Shourya H.S.">Dr. Shourya H.S. (Physiotherapy & Rehabilitation)</option>
-                                            <option value="Dr. Rashmi H.D.">Dr. Rashmi H.D. (Anaesthesiology & Critical Care)</option>
-                                            <option value="Dr. Sachin T.">Dr. Sachin T. (Radio-Diagnosis & Imaging)</option>
-                                            <option value="Dr. Vathsala">Dr. Vathsala (Neurology)</option>
-                                            <option value="Dr. Yathish">Dr. Yathish (Urology & Andrology)</option>
+                                            <option value="Dr. Halesha B.R." data-dept="General Medicine & Diabetology" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Halesha B.R. (General Medicine)</option>
+                                            <option value="Dr. Harsha B.S." data-dept="General Medicine & Diabetology" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Harsha B.S. (General Medicine & Emergency)</option>
+                                            <option value="Dr. Ishwaraprasad G.D." data-dept="General & Laparoscopic Surgery" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Ishwaraprasad G.D. (General Surgery)</option>
+                                            <option value="Dr. Ajith Kumar K.S." data-dept="Orthopaedics & Joint Replacement" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Ajith Kumar K.S. (Orthopaedics)</option>
+                                            <option value="Dr. Subramanya B.R." data-dept="Plastic, Reconstructive & Cosmetic Surgery" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Subramanya B.R. (Plastic & Cosmetic Surgery)</option>
+                                            <option value="Dr. Sridhara S.K." data-dept="Gynaecology & Obstetrics" data-timing="Mon - Sat | 4:30 PM Onwards">Dr. Sridhara S.K. (Obstetrics & Gynaecology)</option>
+                                            <option value="Dr. Impana K." data-dept="Gynaecology & Obstetrics" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Impana K. (Obstetrics & Gynaecology)</option>
+                                            <option value="Dr. Adarsh A.M." data-dept="Paediatrics & Neonatology" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Adarsh A.M. (Paediatrics)</option>
+                                            <option value="Dr. Pratheeksha" data-dept="Paediatrics & Neonatology" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Pratheeksha (Paediatrics)</option>
+                                            <option value="Dr. Satyanarayan R." data-dept="ENT (Ear, Nose & Throat)" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Satyanarayan R. (ENT - Ear, Nose & Throat)</option>
+                                            <option value="Dr. Shourya H.S." data-dept="Physiotherapy & Rehabilitation" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Shourya H.S. (Physiotherapy & Rehabilitation)</option>
+                                            <option value="Dr. Rashmi H.D." data-dept="Anaesthesiology & Pain Management" data-timing="Mon - Sat | 4:30 PM Onwards">Dr. Rashmi H.D. (Anaesthesiology & Critical Care)</option>
+                                            <option value="Dr. Sachin T." data-dept="Radio-Diagnosis & Imaging" data-timing="Mon - Sat | 4:30 PM Onwards">Dr. Sachin T. (Radio-Diagnosis & Imaging)</option>
+                                            <option value="Dr. Vathsala" data-dept="Neurology Services" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Vathsala (Neurology)</option>
+                                            <option value="Dr. Yathish" data-dept="Urology & Andrology Services" data-timing="Mon - Sat | Full Time (10:00 AM - 4:00 PM)">Dr. Yathish (Urology & Andrology)</option>
                                         </select>
+                                        <div id="doctorTimingInfo" class="mt-2 small text-primary fw-medium" style="display:none;"></div>
                                     </div>
 
                                     <!-- Appointment Date -->
@@ -1051,6 +1040,250 @@
     <script src="../assets/js/dz.carousel.js"></script>
     <script src="../assets/js/dz.ajax.js"></script>
     <script src="../assets/js/custom.js"></script>
+
+    <!-- Dynamic Department to Doctor Filtering Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const specialitySelect = document.getElementById('dzSpeciality');
+        const doctorSelect = document.getElementById('dzDoctor');
+        const timingBadge = document.getElementById('doctorTimingInfo');
+
+        if (!specialitySelect || !doctorSelect) return;
+
+        // Comprehensive doctors data mapped by Department / Speciality
+        const departmentDoctors = {
+            "General Medicine & Diabetology": {
+                shortName: "General Medicine",
+                doctors: [
+                    { name: "Dr. Halesha B.R.", role: "Consultant Physician", timing: "Mon - Sat | 4:00 PM Onwards" },
+                    { name: "Dr. Harsha B.S.", role: "Medical Officer / Physician", timing: "Mon - Sat | 4:00 PM Onwards" }
+                ]
+            },
+            "Neurology Services": {
+                shortName: "Neurology",
+                doctors: [
+                    { name: "Dr. Vathsala", role: "Consultant Neurologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "Paediatrics & Neonatology": {
+                shortName: "Paediatrics",
+                doctors: [
+                    { name: "Dr. Adarsh A.M.", role: "Consultant Paediatrician", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+                    { name: "Dr. Pratheeksha", role: "Medical Officer / Paediatrician", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "Gynaecology & Obstetrics": {
+                shortName: "Gynaecology & Obstetrics",
+                doctors: [
+                    { name: "Dr. Sridhara S.K.", role: "Consultant Obstetrician & Gynaecologist", timing: "Mon - Sat | 4:30 PM Onwards" },
+                    { name: "Dr. Impana K.", role: "Consultant Obstetrician & Gynaecologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "In-Vitro Fertilisation (IVF)": {
+                shortName: "IVF & Fertility",
+                doctors: [
+                    { name: "Dr. Impana K.", role: "Fertility & Reproductive Health", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+                    { name: "Dr. Sridhara S.K.", role: "Obstetrics & Infertility Care", timing: "Mon - Sat | 4:30 PM Onwards" }
+                ]
+            },
+            "Physiotherapy & Rehabilitation": {
+                shortName: "Physiotherapy",
+                doctors: [
+                    { name: "Dr. Shourya H.S.", role: "Physiotherapist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "General & Laparoscopic Surgery": {
+                shortName: "General Surgery",
+                doctors: [
+                    { name: "Dr. Ishwaraprasad G.D.", role: "Consultant General Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" }
+                ]
+            },
+            "Orthopaedics & Joint Replacement": {
+                shortName: "Orthopaedics",
+                doctors: [
+                    { name: "Dr. Ajith Kumar K.S.", role: "Consultant Orthopaedic Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" }
+                ]
+            },
+            "Neurosurgery & Spine Care": {
+                shortName: "Neurosurgery & Spine",
+                doctors: [
+                    { name: "Dr. Vathsala", role: "Consultant Neurologist / Neuro Care", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "Plastic, Reconstructive & Cosmetic Surgery": {
+                shortName: "Plastic Surgery",
+                doctors: [
+                    { name: "Dr. Subramanya B.R.", role: "Consultant Plastic Surgeon", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "Urology & Andrology Services": {
+                shortName: "Urology & Andrology",
+                doctors: [
+                    { name: "Dr. Yathish", role: "Consultant Urologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+                ]
+            },
+            "ENT (Ear, Nose & Throat)": {
+                shortName: "ENT",
+                doctors: [
+                    { name: "Dr. Satyanarayan R.", role: "Consultant ENT Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" }
+                ]
+            },
+            "24/7 Emergency & Critical Care": {
+                shortName: "Emergency & Critical Care",
+                doctors: [
+                    { name: "Dr. Harsha B.S.", role: "Medical Officer / Emergency Physician", timing: "Mon - Sat | 4:00 PM Onwards" },
+                    { name: "Dr. Rashmi H.D.", role: "Consultant Anaesthesiologist & Critical Care", timing: "Mon - Sat | 4:30 PM Onwards" }
+                ]
+            },
+            "Anaesthesiology & Pain Management": {
+                shortName: "Anaesthesiology",
+                doctors: [
+                    { name: "Dr. Rashmi H.D.", role: "Consultant Anaesthesiologist", timing: "Mon - Sat | 4:30 PM Onwards" }
+                ]
+            },
+            "Radio-Diagnosis & Imaging": {
+                shortName: "Radio-Diagnosis",
+                doctors: [
+                    { name: "Dr. Sachin T.", role: "Consultant Radiologist", timing: "Mon - Sat | 4:30 PM Onwards" }
+                ]
+            }
+        };
+
+        const allDoctors = [
+            { name: "Dr. Halesha B.R.", dept: "General Medicine & Diabetology", role: "Consultant Physician", timing: "Mon - Sat | 4:00 PM Onwards" },
+            { name: "Dr. Harsha B.S.", dept: "General Medicine & Diabetology", role: "Medical Officer / Physician", timing: "Mon - Sat | 4:00 PM Onwards" },
+            { name: "Dr. Ishwaraprasad G.D.", dept: "General & Laparoscopic Surgery", role: "Consultant General Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" },
+            { name: "Dr. Ajith Kumar K.S.", dept: "Orthopaedics & Joint Replacement", role: "Consultant Orthopaedic Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" },
+            { name: "Dr. Subramanya B.R.", dept: "Plastic, Reconstructive & Cosmetic Surgery", role: "Consultant Plastic Surgeon", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Sridhara S.K.", dept: "Gynaecology & Obstetrics", role: "Consultant Obstetrician & Gynaecologist", timing: "Mon - Sat | 4:30 PM Onwards" },
+            { name: "Dr. Impana K.", dept: "Gynaecology & Obstetrics", role: "Consultant Obstetrician & Gynaecologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Adarsh A.M.", dept: "Paediatrics & Neonatology", role: "Consultant Paediatrician", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Pratheeksha", dept: "Paediatrics & Neonatology", role: "Medical Officer / Paediatrician", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Satyanarayan R.", dept: "ENT (Ear, Nose & Throat)", role: "Consultant ENT Surgeon", timing: "Mon - Sat | 4:00 PM Onwards" },
+            { name: "Dr. Shourya H.S.", dept: "Physiotherapy & Rehabilitation", role: "Physiotherapist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Rashmi H.D.", dept: "Anaesthesiology & Pain Management", role: "Consultant Anaesthesiologist", timing: "Mon - Sat | 4:30 PM Onwards" },
+            { name: "Dr. Sachin T.", dept: "Radio-Diagnosis & Imaging", role: "Consultant Radiologist", timing: "Mon - Sat | 4:30 PM Onwards" },
+            { name: "Dr. Vathsala", dept: "Neurology Services", role: "Consultant Neurologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" },
+            { name: "Dr. Yathish", dept: "Urology & Andrology Services", role: "Consultant Urologist", timing: "Mon - Sat | Full Time (10:00 AM - 4:00 PM)" }
+        ];
+
+        function updateDoctorList(selectedDept, preferredDoctorName) {
+            doctorSelect.innerHTML = '';
+
+            if (selectedDept && departmentDoctors[selectedDept]) {
+                const deptData = departmentDoctors[selectedDept];
+                
+                // Add "Any Available Specialist" option tailored to this department
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = `Any Available Specialist (${deptData.shortName})`;
+                defaultOpt.textContent = `Any Available Specialist (${deptData.shortName} - Fastest Token)`;
+                doctorSelect.appendChild(defaultOpt);
+
+                // Add each doctor belonging to this department
+                let doctorFound = false;
+                deptData.doctors.forEach(doc => {
+                    const opt = document.createElement('option');
+                    opt.value = doc.name;
+                    opt.textContent = `${doc.name} (${doc.role})`;
+                    opt.dataset.timing = doc.timing;
+                    doctorSelect.appendChild(opt);
+
+                    if (preferredDoctorName && doc.name.toLowerCase() === preferredDoctorName.toLowerCase()) {
+                        doctorFound = true;
+                    }
+                });
+
+                if (preferredDoctorName && doctorFound) {
+                    doctorSelect.value = preferredDoctorName;
+                } else {
+                    doctorSelect.value = defaultOpt.value;
+                }
+            } else {
+                // If no department is selected, show all doctors grouped
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = "Any Available Specialist";
+                defaultOpt.textContent = "Any Available Specialist (Fastest Token)";
+                doctorSelect.appendChild(defaultOpt);
+
+                allDoctors.forEach(doc => {
+                    const opt = document.createElement('option');
+                    opt.value = doc.name;
+                    opt.textContent = `${doc.name} (${doc.dept.split('&')[0].trim()})`;
+                    opt.dataset.timing = doc.timing;
+                    opt.dataset.dept = doc.dept;
+                    doctorSelect.appendChild(opt);
+                });
+
+                if (preferredDoctorName) {
+                    doctorSelect.value = preferredDoctorName;
+                }
+            }
+
+            updateTimingBadge();
+        }
+
+        function updateTimingBadge() {
+            if (!timingBadge) return;
+            const selectedVal = doctorSelect.value;
+            const selectedOpt = doctorSelect.options[doctorSelect.selectedIndex];
+
+            if (selectedVal && selectedOpt && selectedOpt.dataset && selectedOpt.dataset.timing) {
+                timingBadge.innerHTML = `<i class="feather icon-clock me-1 text-primary"></i> <strong>OPD Hours:</strong> ${selectedOpt.dataset.timing}`;
+                timingBadge.style.display = 'block';
+            } else if (selectedVal && selectedVal.includes("Any Available")) {
+                timingBadge.innerHTML = `<i class="feather icon-zap me-1 text-warning"></i> <strong>Walk-in / Fast Track:</strong> Priority token assigned to next available OPD consultant.`;
+                timingBadge.style.display = 'block';
+            } else {
+                timingBadge.style.display = 'none';
+            }
+        }
+
+        specialitySelect.addEventListener('change', function () {
+            updateDoctorList(this.value);
+        });
+
+        doctorSelect.addEventListener('change', function () {
+            const selectedOpt = this.options[this.selectedIndex];
+            if (selectedOpt && selectedOpt.dataset && selectedOpt.dataset.dept) {
+                const doctorDept = selectedOpt.dataset.dept;
+                if (specialitySelect.value !== doctorDept) {
+                    specialitySelect.value = doctorDept;
+                    updateDoctorList(doctorDept, this.value);
+                    return;
+                }
+            }
+            updateTimingBadge();
+        });
+
+        // Handle URL parameters (?dept=...&doctor=...)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlDept = urlParams.get('dept') || urlParams.get('department') || urlParams.get('speciality');
+        const urlDoctor = urlParams.get('doctor');
+
+        let matchedDept = null;
+        if (urlDept) {
+            const searchLower = urlDept.toLowerCase().trim();
+            for (let deptName in departmentDoctors) {
+                if (deptName.toLowerCase().includes(searchLower) || searchLower.includes(deptName.toLowerCase())) {
+                    matchedDept = deptName;
+                    break;
+                }
+            }
+        } else if (urlDoctor) {
+            const foundDoc = allDoctors.find(d => d.name.toLowerCase().includes(urlDoctor.toLowerCase().trim()));
+            if (foundDoc) {
+                matchedDept = foundDoc.dept;
+            }
+        }
+
+        if (matchedDept) {
+            specialitySelect.value = matchedDept;
+            updateDoctorList(matchedDept, urlDoctor);
+        } else {
+            updateTimingBadge();
+        }
+    });
+    </script>
 </body>
 
 </html>
