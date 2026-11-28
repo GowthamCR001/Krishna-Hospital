@@ -17,7 +17,7 @@
 // GOOGLE SHEETS WEBHOOK INTEGRATION
 // Target Sheet: https://docs.google.com/spreadsheets/d/1svK_6Fbfx5W1ngfVgTw52SCgqUIONuYUMHEzGHwXHNQ/edit
 // ==============================================================================
-var GOOGLE_SHEET_WEB_APP_URL = window.GOOGLE_SHEET_WEB_APP_URL || "https://script.google.com/macros/s/AKfycbyb194q_krishna_hospital/exec";
+var GOOGLE_SHEET_WEB_APP_URL = window.GOOGLE_SHEET_WEB_APP_URL || "https://script.google.com/macros/s/AKfycbxOxjl7351KJHFdypZu1R1bw5oobhIfb2lfbGC_kUuWvLHYPEwlXD06WPN3jXSS5M1E/exec";
 
 function contactForm() {
     window.verifyRecaptchaCallback = function(response) {
