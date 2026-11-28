@@ -748,7 +748,7 @@
                                     <div class="col-md-6">
                                         <label class="form-label fw-semibold small text-secondary">Preferred Doctor <small class="text-muted">(Optional)</small></label>
                                         <select name="dzDoctor" id="dzDoctor" class="form-select bg-light border-0 py-2">
-                                            <option value="Any Available Specialist" selected>Any Available Specialist (Fastest Token)</option>
+                                            <option value="" disabled selected>Choose Preferred Doctor</option>
                                             <option value="Dr. Halesha B.R." data-dept="General Medicine & Diabetology" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Halesha B.R. (General Medicine)</option>
                                             <option value="Dr. Harsha B.S." data-dept="General Medicine & Diabetology" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Harsha B.S. (General Medicine & Emergency)</option>
                                             <option value="Dr. Ishwaraprasad G.D." data-dept="General & Laparoscopic Surgery" data-timing="Mon - Sat | 4:00 PM Onwards">Dr. Ishwaraprasad G.D. (General Surgery)</option>
@@ -1172,38 +1172,52 @@
 
             if (selectedDept && departmentDoctors[selectedDept]) {
                 const deptData = departmentDoctors[selectedDept];
-                
-                // Add "Any Available Specialist" option tailored to this department
-                const defaultOpt = document.createElement('option');
-                defaultOpt.value = `Any Available Specialist (${deptData.shortName})`;
-                defaultOpt.textContent = `Any Available Specialist (${deptData.shortName} - Fastest Token)`;
-                doctorSelect.appendChild(defaultOpt);
+                const docCount = deptData.doctors.length;
 
-                // Add each doctor belonging to this department
+                // Add placeholder if there are multiple doctors or no preference specified
+                if (docCount > 1 || !preferredDoctorName) {
+                    const placeholderOpt = document.createElement('option');
+                    placeholderOpt.value = '';
+                    placeholderOpt.textContent = 'Choose Preferred Doctor';
+                    placeholderOpt.disabled = true;
+                    if (!preferredDoctorName && docCount > 1) {
+                        placeholderOpt.selected = true;
+                    }
+                    doctorSelect.appendChild(placeholderOpt);
+                }
+
                 let doctorFound = false;
-                deptData.doctors.forEach(doc => {
+                deptData.doctors.forEach((doc, idx) => {
                     const opt = document.createElement('option');
                     opt.value = doc.name;
                     opt.textContent = `${doc.name} (${doc.role})`;
                     opt.dataset.timing = doc.timing;
-                    doctorSelect.appendChild(opt);
 
-                    if (preferredDoctorName && doc.name.toLowerCase() === preferredDoctorName.toLowerCase()) {
+                    // If single doctor in this department and no specific doctor requested, auto-select them
+                    if (!preferredDoctorName && docCount === 1) {
+                        opt.selected = true;
                         doctorFound = true;
                     }
+
+                    if (preferredDoctorName && doc.name.toLowerCase() === preferredDoctorName.toLowerCase()) {
+                        opt.selected = true;
+                        doctorFound = true;
+                    }
+
+                    doctorSelect.appendChild(opt);
                 });
 
                 if (preferredDoctorName && doctorFound) {
                     doctorSelect.value = preferredDoctorName;
-                } else {
-                    doctorSelect.value = defaultOpt.value;
                 }
             } else {
-                // If no department is selected, show all doctors grouped
-                const defaultOpt = document.createElement('option');
-                defaultOpt.value = "Any Available Specialist";
-                defaultOpt.textContent = "Any Available Specialist (Fastest Token)";
-                doctorSelect.appendChild(defaultOpt);
+                // If no department is selected, show placeholder and all doctors
+                const placeholderOpt = document.createElement('option');
+                placeholderOpt.value = '';
+                placeholderOpt.textContent = 'Choose Preferred Doctor';
+                placeholderOpt.disabled = true;
+                placeholderOpt.selected = !preferredDoctorName;
+                doctorSelect.appendChild(placeholderOpt);
 
                 allDoctors.forEach(doc => {
                     const opt = document.createElement('option');
@@ -1211,6 +1225,9 @@
                     opt.textContent = `${doc.name} (${doc.dept.split('&')[0].trim()})`;
                     opt.dataset.timing = doc.timing;
                     opt.dataset.dept = doc.dept;
+                    if (preferredDoctorName && doc.name.toLowerCase() === preferredDoctorName.toLowerCase()) {
+                        opt.selected = true;
+                    }
                     doctorSelect.appendChild(opt);
                 });
 
@@ -1229,9 +1246,6 @@
 
             if (selectedVal && selectedOpt && selectedOpt.dataset && selectedOpt.dataset.timing) {
                 timingBadge.innerHTML = `<i class="feather icon-clock me-1 text-primary"></i> <strong>OPD Hours:</strong> ${selectedOpt.dataset.timing}`;
-                timingBadge.style.display = 'block';
-            } else if (selectedVal && selectedVal.includes("Any Available")) {
-                timingBadge.innerHTML = `<i class="feather icon-zap me-1 text-warning"></i> <strong>Walk-in / Fast Track:</strong> Priority token assigned to next available OPD consultant.`;
                 timingBadge.style.display = 'block';
             } else {
                 timingBadge.style.display = 'none';
